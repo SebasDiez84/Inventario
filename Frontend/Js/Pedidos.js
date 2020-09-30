@@ -60,7 +60,7 @@ export default{
         },
         //Guarda la aplicación que fue ingresada en la página.
         guardarRegistro() {
-        let url = 'https://api-pedidos-software3.herokuapp.com/pedidos'
+        let url = 'http://http://localhost:3000/Tasks'
         this.$axios.post(url, this.datosFormulario()).then(respuesta => {
           //Recarga los marcadores de la base de datos.
           this.$swal.fire({
@@ -69,7 +69,7 @@ export default{
             type: "success",
             timer: 3000
           }).then(r => {
-            window.open('https://api-pedidos-software3.herokuapp.com/pedidos', '_self');
+            window.open('http://http://localhost:3000/Tasks', '_self');
           });
           this.cargarLista();
           this.limpiarLista();
